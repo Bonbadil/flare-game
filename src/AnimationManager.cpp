@@ -35,7 +35,7 @@ AnimationSet *AnimationManager::getAnimationSet(const string& filename) {
 		fprintf(stderr, "AnimationManager::getAnimationSet: %s not found\n", filename.c_str());
 		SDL_Quit();
 		exit(1);
-		// return 0;
+		return 0;
 	}
 }
 
