@@ -417,11 +417,11 @@ int SDL_gfxBlitRGBA(SDL_Surface * src, SDL_Rect * srcrect, SDL_Surface * dst, SD
 	* Make sure the surfaces aren't locked 
 	*/
 	if (!src || !dst) {
-		SDL_SetError("SDL_UpperBlit: passed a NULL surface");
+		fprintf(stderr, "SDL_UpperBlit: passed a NULL surface");
 		return (-1);
 	}
 	if ((src->locked) || (dst->locked)) {
-		SDL_SetError("Surfaces must not be locked during blit");
+		fprintf(stderr, "Surfaces must not be locked during blit");
 		return (-1);
 	}
 
@@ -535,7 +535,7 @@ int SDL_gfxSetAlpha(SDL_Surface *src, Uint8 a)
 	if ( (src==NULL) || 
 	     (src->format==NULL) || 
 	     (src->format->BytesPerPixel!=4) ) {
-          SDL_SetError("SDL_gfxSetAlpha: Invalid input surface.");
+          fprintf(stderr, "SDL_gfxSetAlpha: Invalid input surface.");
 	  return -1;
         }
 
@@ -598,7 +598,7 @@ int SDL_gfxMultiplyAlpha(SDL_Surface *src, Uint8 a)
 	if ( (src==NULL) || 
 	     (src->format==NULL) || 
 	     (src->format->BytesPerPixel!=4) ) {
-          SDL_SetError("SDL_gfxMultiplyAlpha: Invalid input surface.");
+          fprintf(stderr, "SDL_gfxMultiplyAlpha: Invalid input surface.");
 	  return -1;
         }
         
