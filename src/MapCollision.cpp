@@ -26,6 +26,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "AStarNode.h"
 #include "MapCollision.h"
 #include "Settings.h"
+
+#include <cmath>
 #include <cfloat>
 
 using namespace std;

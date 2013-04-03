@@ -85,7 +85,6 @@ public:
 };
 
 // Utility Functions
-int round(float f);
 Point round(FPoint fp);
 Point screen_to_map(int x, int y, int camx, int camy);
 Point map_to_screen(int x, int y, int camx, int camy);

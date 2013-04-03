@@ -25,10 +25,6 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 using namespace std;
 
 
-int round(float f) {
-	return (int)(f + 0.5);
-}
-
 Point round(FPoint fp) {
 	Point result;
 	result.x = round(fp.x);
