@@ -72,10 +72,6 @@ static void init() {
 	// Load miscellaneous settings
 	loadMiscSettings();
 
-	// Add Window Titlebar Icon
-	titlebar_icon = IMG_Load(mods->locate("images/logo/icon.png").c_str());
-	SDL_WM_SetIcon(titlebar_icon, NULL);
-
 	// Create window
 	Uint32 flags = 0;
 
